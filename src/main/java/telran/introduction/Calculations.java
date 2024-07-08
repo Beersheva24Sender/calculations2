@@ -12,9 +12,6 @@ public class Calculations {
     }
 
     public static int divide(int op1, int op2) {
-        if (op2 == 0) {
-            throw new IllegalArgumentException("Division by zero is not allowed.");
-        }
         int res = op1 / op2;
         return res;
     }
@@ -54,7 +51,7 @@ public class Calculations {
 
     public static boolean isDividedOn(int number, int dividor) {
         if (dividor == 0) {
-            throw new IllegalArgumentException("Division by zero is not allowed.");
+            return false;
         }
         if (number % dividor == 0) {
             return true;
