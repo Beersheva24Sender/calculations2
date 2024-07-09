@@ -18,6 +18,7 @@ public class CalculationsTest {
     @Test
     void divideTest() {
         assertEquals(2, divide(4, 2));
+        assertThrowsExactly(ArithmeticException.class, () -> divide(10, 0));
     }
     @Test
     void subtractTest() {
